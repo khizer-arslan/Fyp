@@ -1,0 +1,5 @@
+{
+"mongoURI":"mongodb+srv://khizer12:khizer12@connector.3lhpjfm.mongodb.net/Connector?retryWrites=true&w=majority",
+"jwtSecret":"MYNAMEISMUHAMMADKHIZER"
+
+}
