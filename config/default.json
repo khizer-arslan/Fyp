@@ -1,5 +1,7 @@
 {
 "mongoURI":"mongodb+srv://khizer12:khizer12@connector.3lhpjfm.mongodb.net/Connector?retryWrites=true&w=majority",
-"jwtSecret":"MYNAMEISMUHAMMADKHIZER"
+"jwtSecret":"MYNAMEISMUHAMMADKHIZER",
+"githubClientId":"1234567891011121314",
+"githubSecret":"1232314423412312324232"
 
 }

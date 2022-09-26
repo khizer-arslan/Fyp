@@ -3,6 +3,7 @@ const router = express.Router();
 const mid = require('../../middleware/mid');
 const User = require('../../config/models/User');
 const jwt = require('jsonwebtoken');
+
 const config = require('config');
 const bcrypt = require('bcryptjs');
 const { body, validationResult } = require('express-validator');
@@ -69,5 +70,8 @@ router.post(
     }
   }
 );
+//  Route   post  api/profile/github/:username
+//  Desc    get user repos from Github
+//  Access  Public
 
 module.exports = router;
