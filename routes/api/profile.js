@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../../config/models/User');
 const Profile = require('../../config/models/Profile');
+const Post = require('../../config/models/Post');
 const mid = require('../../middleware/mid');
 const { body, validationResult } = require('express-validator');
 const request = require('request');
@@ -83,7 +84,6 @@ router.post(
     try {
       let profile = await Profile.findOne({ user: req.user.id });
       if (profile) {
-        u;
         profile = await Profile.findOneAndUpdate(
           { user: req.user.id },
           { $set: profileFields },
@@ -110,7 +110,6 @@ router.post(
 router.get('/', async (req, res) => {
   try {
     const profiles = await Profile.find().populate('user', ['name', 'avatar']);
-
     return res.json(profiles);
   } catch (err) {
     console.log(err.message);
@@ -138,6 +137,8 @@ router.get('/user/:user_id', async (req, res) => {
 //  Access  public
 router.delete('/', mid, async (req, res) => {
   try {
+    // remove post
+    await Post.deleteMany({ user: req.user.id });
     // remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // remove user
