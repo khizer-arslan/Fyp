@@ -1,7 +1,12 @@
 {
-"mongoURI":"mongodb+srv://khizer12:khizer12@connector.3lhpjfm.mongodb.net/Connector?retryWrites=true&w=majority",
+"mongoURI":"mongodb+srv://karekamal:karekamal123786@cluster0.tjy27u5.mongodb.net/karekamal",
 "jwtSecret":"MYNAMEISMUHAMMADKHIZER",
 "githubClientId":"1234567891011121314",
 "githubSecret":"1232314423412312324232"
 
 }
+// mongodb+srv://karekamal:karekamal123786@cluster0.tjy27u5.mongodb.netkarekamal/
+
+
+
+// mongodb+srv://khizer12:khizer12@connector.3lhpjfm.mongodb.net
